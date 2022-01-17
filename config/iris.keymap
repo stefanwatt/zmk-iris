@@ -13,6 +13,19 @@
 #define RAISE   2
 
 / {
+
+		behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+	
 	keymap {
 		compatible = "zmk,keymap";
 
